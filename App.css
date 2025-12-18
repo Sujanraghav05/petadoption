@@ -1,0 +1,272 @@
+/* ===============================
+   Global Reset & Base
+================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(dog.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #111;
+}
+
+/* ===============================
+   Navbar
+================================ */
+.navbar {
+    backdrop-filter: blur(18px);
+    background: rgba(0, 0, 0, 0.65) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #61dafb !important;
+}
+
+.navbar-nav .nav-link,
+.dropdown .btn {
+    color: #ffffff !important;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover,
+    .dropdown .btn:hover {
+        background-color: rgba(97, 218, 251, 0.2);
+        color: #61dafb !important;
+    }
+
+
+    .navbar-nav .nav-link.active {
+        background-color: rgba(97, 218, 251, 0.35);
+        color: #61dafb !important;
+    }
+
+/* ===============================
+   Common Page Containers
+================================ */
+.home,
+.about,
+.services,
+.contact,
+.adoption-form {
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(28px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+    /* ===============================
+   Headings
+================================ */
+    .home h2,
+    .about h3,
+    .services h3,
+    .contact h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #010a24;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===============================
+   Text & Paragraphs
+================================ */
+    .home p,
+    .about p,
+    .services p,
+    .contact p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #222;
+        margin-bottom: 12px;
+    }
+
+/* ===============================
+   Home Carousel
+================================ */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ===============================
+   Services Page Image
+================================ */
+.services img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   Adoption Form
+================================ */
+.adoption-form {
+    max-width: 600px;
+}
+
+    .adoption-form label {
+        color: #1967b6;
+        font-weight: bold;
+    }
+
+    .adoption-form input,
+    .adoption-form textarea,
+    .adoption-form select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 14px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    .adoption-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #1967b6;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+        .adoption-form button:hover {
+            background-color: #0d47a1;
+        }
+
+.dropdown {
+    position: relative;
+
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+}
+.dropdown-menu li a{
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    color: darkblue;
+}
+.notify {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.notify {
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+}
+
+
+    .notify:hover {
+        background-color: #61dafb;
+        color: #000;
+    }
+
+    .notify:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.4);
+    }
+
+
+/* ===============================
+   Alerts & Validation
+================================ */
+.invalid-feedback {
+    font-size: 0.9rem;
+    color: #dc3545;
+}
+
+.alert {
+    margin-top: 15px;
+}
+
+/* ===============================
+   Links
+================================ */
+.about a,
+.services a,
+.contact a,
+.adoption-form a {
+    color: #1967b6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    .about a:hover,
+    .services a:hover,
+    .contact a:hover,
+    .adoption-form a:hover {
+        color: #0d47a1;
+    }
+
+/* ===============================
+   Footer (Optional)
+================================ */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+/* ===============================
+   Mobile Responsive
+================================ */
+@media (max-width: 768px) {
+    .home,
+    .about,
+    .services,
+    .contact,
+    .adoption-form {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 22px;
+    }
+
+    .home h2,
+    .about h3,
+    .services h3,
+    .contact h2 {
+        font-size: 28px;
+    }
+}
